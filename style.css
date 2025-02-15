@@ -1,0 +1,602 @@
+/* General Styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+/* Glowing Text */
+.section h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #000000; /* Cyan Blue */
+  text-shadow: 0 0 10px #73cde9, 0 0 20px #3db1df, 0 0 40px #2eafcf;
+  margin-bottom: 20px;
+}
+.projects {
+  background: #282c34;
+  color: white;
+  padding: 50px 20px;
+}
+
+.projects h2 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  color: #000000; /* Cyan Blue */
+  margin-bottom: 30px;
+  text-shadow: 0 0 10px #ffffff, 0 0 20px #ffffff, 0 0 40px #ffffff;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.project-card {
+  background: #333;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.project-card h3 {
+  font-size: 1.5rem;
+  color: #54c6dd;
+  margin: 15px 0 10px;
+}
+
+.project-card p {
+  font-size: 1rem;
+  color: #bbb;
+  padding: 0 15px;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.project-link {
+  display: inline-block;
+  text-decoration: none;
+  color: white;
+  background: #54c6dd;
+  padding: 10px 15px;
+  border-radius: 4px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  transition: background 0.3s ease;
+}
+
+.project-link:hover {
+  background: #0baa8a;
+}
+
+
+.navbar {
+  padding: 1rem;
+}
+/* Navbar Items */
+.nav-item {
+  position: relative;
+  display: inline-block;
+  perspective: 1000px; /* Enable 3D perspective */
+}
+
+.nav-link {
+  display: inline-block;
+  color: white;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+  transform-origin: center;
+}
+
+/* 3D Hover Effect */
+.nav-item:hover .nav-link {
+  transform: rotateX(30deg) translateY(-5px); /* Rotate and elevate */
+  color: #0baa8a; /* Change text color */
+}
+
+/* Optional: Add a shadow on hover */
+.nav-item:hover .nav-link {
+  box-shadow: 0 10px 20px rgba(199, 192, 192, 0.3);
+}
+
+.nav-link {
+  text-transform: uppercase;
+  color: #1a916d;
+  transition: color 0.5s ease;
+}
+
+.nav-link:hover {
+  color: #0baa8a;
+}
+
+.section {
+  min-height: 100vh;
+  padding: 50px;
+  text-align: center;
+}
+
+.home {
+  background: #282c34;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home {
+  position: relative; /* Create a containing block for the pseudo-element */
+  color: white;
+  /* padding-top: 200px; */
+  overflow: hidden; /* Prevent the blurred background from overflowing */
+}
+
+/* Add the blurred background image */
+.home::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyeY0I4l8KyeNW8NOufGORQzI8zPsAXUl9og&s");
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  filter: blur(8px); /* Apply the blur effect */
+  z-index: 1; /* Place it behind the content */
+  opacity: 0.7; /* Adjust the transparency if needed */
+}
+
+/* Ensure the text stays above the background */
+.home > * {
+  position: relative;
+  z-index: 2;
+}
+.skills {
+  position: relative; /* Create a containing block for the pseudo-element */
+  color: white;
+  padding-top: 200px;
+  overflow: hidden; /* Prevent the blurred background from overflowing */
+}
+
+/* Add the blurred background image */
+.skills::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://img-c.udemycdn.com/course/750x422/1890026_f604_4.jpg");
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  filter: blur(8px); /* Apply the blur effect */
+  z-index: 1; /* Place it behind the content */
+  opacity: 0.7; /* Adjust the transparency if needed */
+}
+
+/* Ensure the text stays above the background */
+.skills > * {
+  position: relative;
+  z-index: 2;
+}
+.projects {
+  position: relative; /* Create a containing block for the pseudo-element */
+  color: white;
+  padding-top: 90px;
+  overflow: hidden; /* Prevent the blurred background from overflowing */
+}
+
+/* Add the blurred background image */
+.projects::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://img.freepik.com/free-photo/document-marketing-strategy-business-concept_53876-132231.jpg");
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  filter: blur(8px); /* Apply the blur effect */
+  z-index: 1; /* Place it behind the content */
+  opacity: 0.7; /* Adjust the transparency if needed */
+}
+
+/* Ensure the text stays above the background */
+.projects > * {
+  position: relative;
+  z-index: 2;
+}
+.about {
+  position: relative; /* Create a containing block for the pseudo-element */
+  color: white;
+  /* padding-top: 90px; */
+  overflow: hidden; /* Prevent the blurred background from overflowing */
+}
+
+/* Add the blurred background image */
+.about::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/002/413/499/non_2x/all-about-me-neon-signs-style-text-vector.jpg");
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  filter: blur(8px); /* Apply the blur effect */
+  z-index: 1; /* Place it behind the content */
+  opacity: 0.7; /* Adjust the transparency if needed */
+}
+
+/* Ensure the text stays above the background */
+.about > * {
+  position: relative;
+  z-index: 2;
+}
+.contact {
+  position: relative; /* Create a containing block for the pseudo-element */
+  color: white;
+  /* padding-top: 90px; */
+  overflow: hidden; /* Prevent the blurred background from overflowing */
+}
+
+/* Add the blurred background image */
+.contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/005/263/636/non_2x/contact-us-concept-icons-such-as-mobile-phone-e-mail-address-chat-global-communication-on-dark-blue-background-for-presentation-web-banner-article-business-and-network-connection-and-company-free-vector.jpg");
+  background-size: cover; /* Ensure the image covers the entire section */
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Prevent tiling */
+  filter: blur(8px); /* Apply the blur effect */
+  z-index: 1; /* Place it behind the content */
+  opacity: 0.7; /* Adjust the transparency if needed */
+}
+
+/* Ensure the text stays above the background */
+.contact > * {
+  position: relative;
+  z-index: 2;
+}
+
+.about,  .experience, .contact {
+  background: #282c34;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/* Shutter Animation */
+.shutter {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-bottom:3px solid white;
+  background: black;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2rem;
+  animation: shutterClose 3s forwards;
+}
+
+@keyframes shutterClose {
+  0% {
+      transform: translateY(0);
+  }
+  100% {
+      transform: translateY(-100%);
+  }
+}
+
+/* Skills Section */
+.skill-bar {
+  position: relative;
+  margin: 20px auto;
+  height: 30px;
+  background: #c2ecf1;
+  border-radius: 20px;
+  overflow: hidden;
+  max-width: 500px;
+}
+
+.skill-bar .progress {
+  height: 100%;
+  background: #16816c;
+  text-align: center;
+  line-height: 30px;
+  white-space: nowrap;
+  padding-left: 16px;
+  font-size: 20px;
+}
+
+.section h2 {
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+}
+
+.section p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+}
+/* Home Section Image Animation */
+.home img {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  margin-bottom: 20px;
+  transform-style: preserve-3d; /* Enables 3D effect */
+  backface-visibility: hidden; /* Ensures smooth flipping */
+  opacity: 0; /* Start hidden */
+  transform: rotateY(90deg) scale(0.8); /* Start rotated and scaled down */
+  animation: flipIn 2.5s ease-out forwards;
+}
+
+/* 3D Flip Animation */
+@keyframes flipIn {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg) scale(0.8);
+  }
+  50% {
+    opacity: 0.5;
+    transform: rotateY(45deg) scale(1.1); /* Slight overscale for bounce effect */
+  }
+  100% {
+    opacity: 1;
+    transform: rotateY(0deg) scale(1);
+  }
+}
+
+/* Hover Effect */
+.home img:hover {
+  transform: scale(1.2) rotateZ(10deg); /* Adds a playful tilt */
+  box-shadow: 0 15px 30px rgba(219, 213, 213, 0.5); /* Emphasizes focus */
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+/* Text Reveal Animation */
+@keyframes textReveal {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+    color: rgb(93, 184, 184);
+
+  }
+  50% {
+    transform: translateY(-10%);
+    opacity: 0.5;
+    color: rgb(110, 190, 190);
+
+
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+    color: rgb(137, 231, 231);
+
+  }
+}
+
+/* Styling the Text */
+.text-reveal {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: white;
+  text-transform: uppercase;
+  animation: textReveal 3s ease-out forwards;
+  opacity: 0; /* Start hidden */
+  
+}
+
+/* text-fade-in */
+@keyframes text-fade-in {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+    color: rgb(97, 228, 140);
+
+  }
+  50% {
+    transform: translateY(-10%);
+    opacity: 0.5;
+    color: rgb(90, 243, 141);
+
+
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+    color: rgb(72, 226, 123);
+
+  }
+}
+.contact {
+  background: rgba(40, 44, 52, 0.8); /* Transparent background */
+  color: white;
+  padding: 100px 20px;
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: #000000; /* Cyan Blue */
+}
+
+.contact p {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.contact-details {
+  margin: 20px 0;
+}
+
+.contact-details p {
+  margin: 10px 0;
+}
+
+.contact-details a {
+  color: #0baa8a;
+  text-decoration: none;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+}
+
+.social-links {
+  margin-top: 30px;
+}
+
+.social-link {
+  display: inline-block;
+  margin: 0 10px;
+  color: #1a916d;
+  font-size: 1.2rem;
+  text-decoration: none;
+  border: 2px solid transparent;
+  padding: 10px 15px;
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  color: #0baa8a;
+  border: 2px solid #0baa8a;
+  border-radius: 5px;
+}
+
+
+/* Styling the Text */
+.text-fade-in {
+  font-size: 2rem;
+  font-weight: bolder;
+  color: white;
+  text-transform: uppercase;
+  animation: text-fade-in 3s ease-out forwards;
+  opacity: 0; /* Start hidden */
+  
+}
+/* Bounce Animation */
+@keyframes bounce {
+  0% {
+    transform: translateY(100%);
+    opacity: 0;
+    color: #0baa8a;
+  }
+  50% {
+    transform: translateY(-10%);
+    opacity: 0.5;
+    color: #0eaa8b;
+
+  }
+  100% {
+    transform: translateY(0%);
+    opacity: 1;
+    color: #0baa8a;
+
+  }
+}
+
+.bounce-logo span {
+  display: inline-block;
+  animation: bounce 1s ease-in-out forwards;
+}
+
+.bounce-logo span:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.bounce-logo span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.bounce-logo span:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.bounce-logo span:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+.bounce-logo span:nth-child(5) {
+  animation-delay: 0.5s;
+}
+
+.bounce-logo span:nth-child(6) {
+  animation-delay: 0.6s;
+}
+.bounce-logo span:nth-child(7) {
+  animation-delay: 0.7s;
+}
+
+.bounce-logo span:nth-child(8) {
+  animation-delay: 0.8s;
+}
+
+.bounce-logo span:nth-child(9) {
+  animation-delay: 0.9s;
+}
+.bounce-logo span:nth-child(10) {
+  animation-delay: 1.0s;
+}
+
+.bounce-logo span:nth-child(11) {
+  animation-delay: 1.1s;
+} 
+.btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: #000000;
+  background-color: #313131;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.btn:hover {
+  background-color: #33e483;
+}
+
+
+
+/* Continue for each letter */
+

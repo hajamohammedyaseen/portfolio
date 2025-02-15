@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+    <!-- Shutter Animation -->
+    <div class="shutter">
+        <span>Welcome to My Portfolio</span>
+    </div>
+    <!-- <a class="navbar-brand bounce-logo" href="#">
+        <span>M</span><span>y</span>
+        <span>P</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span>
+    </a> -->
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand bounce-logo" href="#">
+                <span>M</span><span>y</span>
+                <span>P</span><span>o</span><span>r</span><span>t</span><span>f</span><span>o</span><span>l</span><span>i</span><span>o</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#experience">Resume</a></li> -->
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!-- Sections -->
+    <section id="home" class="section home">
+        <div class="content">
+            <img src="./img/1616753569641-05.jpeg" alt="My Image"
+                style="width: 250px; height: 250px; border-radius: 50%; margin-bottom: 20px;">
+            <h1 class="text-reveal">Hi, I'm mohammed yaseen</h1>
+            <p class="text-fade-in">Frontend Developer</p>
+        </div>
+    </section>
+
+
+    <section id="about" class="section about">
+        <h2>About Me</h2>
+        <p>I am a passionate Front-End Developer with a strong foundation in HTML,
+            CSS, and JavaScript. I specialize in creating engaging, responsive, and user-friendly web interfaces that
+            provide seamless experiences across devices.
+
+            During my 6-month internship, I had the opportunity to work on various projects that honed my skills in
+            modern web development techniques, including responsive design, cross-browser compatibility, and performance
+            optimization. I also gained valuable experience collaborating with teams, following agile methodologies, and
+            using version control systems like Git.
+
+            What sets me apart is my keen eye for design and detail, ensuring that every pixel is in its place. I thrive
+            on transforming creative ideas into functional web applications while keeping up with the latest trends and
+            best practices in front-end development.
+
+            When I'm not coding, I enjoy exploring new technologies, contributing to personal projects, and continually
+            expanding my knowledge in areas such as:
+
+            CSS Frameworks: Proficient in Bootstrap and Tailwind for rapid UI development.
+            JavaScript Libraries: Familiar with libraries like React to build dynamic and interactive components.
+            Version Control: Adept in Git for managing code collaboratively and efficiently.
+            I'm excited to grow my career in front-end development, tackle challenging problems, and bring innovative
+            ideas to life. Let's build something amazing together!</p>
+    </section>
+
+    <section id="skills" class="section skills">
+        <h2>Skills</h2>
+        <div class="skill-bar">
+            <div class="progress" style="width: 95%;">HTML</div>
+        </div>
+        <div class="skill-bar">
+            <div class="progress" style="width: 90%;">CSS</div>
+        </div>
+        <div class="skill-bar">
+            <div class="progress" style="width: 92%;">Bootstrap</div>
+        </div>
+        <div class="skill-bar">
+            <div class="progress" style="width: 80%;">JavaScript</div>
+        </div>
+    </section>
+
+    <section id="projects" class="section projects">
+        <h2>Projects</h2>
+        <div class="projects-container">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="https://plus.unsplash.com/premium_photo-1661290256778-3b821d52c514?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8cHJvamVjdHxlbnwwfHwwfHx8MA%3D%3D" alt="Project 1" class="project-image">
+                <h3>Weather App</h3>
+                <p>A simple weather app built with JavaScript, OpenWeather API, and Bootstrap. It displays real-time weather data based on user input.</p>
+                <a href="https://example.com/weather-app" target="_blank" class="project-link">View Project</a>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2AjZyC8q92GPZaSLsta_V_wvui66q1RXIIA&s" alt="Project 2" class="project-image">
+                <h3>Portfolio Website</h3>
+                <p>A responsive portfolio website showcasing skills, projects, and experience. Built with HTML, CSS, and JavaScript.</p>
+                <a href="https://example.com/portfolio" target="_blank" class="project-link">View Project</a>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSlwr1ipYG-iIIcOWhVgNIdQWt-6aEnmiyh7w&s" alt="Project 3" class="project-image">
+                <h3>To-Do List App</h3>
+                <p>A task management app with features like adding, editing, and deleting tasks. Developed using React.js and CSS Modules.</p>
+                <a href="https://example.com/todo-app" target="_blank" class="project-link">View Project</a>
+            </div>
+        </div>
+    </section>
+    
+
+    <!-- <section id="experience" class="section experience">
+        <h2>Experience</h2>
+        <p>[Your experience]</p>
+    </section> -->
+
+    <section id="contact" class="section contact">
+        <h2>Contact Me</h2>
+        <p>If you'd like to get in touch, feel free to reach out to me through any of the platforms below. I'd love to hear from you!</p>
+        <div class="contact-details">
+          <p><strong>Email:</strong> <a href="yours@gmail.com">yaseen0809@gmail.com</a></p>
+          <p><strong>Phone:</strong> <a href="tel:+123456789">+91 709 440 5448</a></p>
+          <p><strong>Location:</strong>  velachery ,Chennai</p>
+          <a href="./cv/H Mohammed Yaseen Resume.pdf" download class="btn">Download CV</a>
+        </div>
+        <div class="social-links">
+          <a href="https://www.linkedin.com/feed/" target="_blank" class="social-link">LinkedIn</a>
+          <a href="https://github.com/" target="_blank" class="social-link">GitHub</a>
+          <a href="https://twitter.com/" target="_blank" class="social-link">Twitter</a>
+        </div>
+      </section>
+
+     <!-- <section id="cv-download" class="section">
+    <h2>Download My CV</h2>
+    <a href="path-to-your-cv-file/CV.pdf" download="Mohammed_Yaseen_CV" class="download-btn">
+        Download CV
+    </a>
+</section> -->
+      
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
